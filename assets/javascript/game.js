@@ -1,6 +1,6 @@
 var wins = 0;
 var losses = 0; 
-var GuessLeft = 10;
+var GuessLeft = 9;
 var Guess = [,];
 
 function randomLetter() {
@@ -27,6 +27,8 @@ function randomLetter() {
 
     if ( userguess === randomLetter()){
       wins++;
+      GuessLeft = 9;
+      Guess = [,];
     }
     else if (userguess != randomLetter()){
       GuessLeft--;
